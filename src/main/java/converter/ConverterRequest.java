@@ -17,11 +17,11 @@ public class ConverterRequest {
         this.res = "";
     }
 
-    public ConverterRequest(String tC, String tF, String tK) {
+    public ConverterRequest(String tC, String tF, String tK, String res) {
         this.tC = tC;
         this.tF = tF;
         this.tK = tK;
-        this.res = convert(tC, tF, tK);
+        this.res = res;
     }
 
     public String getRes() {
