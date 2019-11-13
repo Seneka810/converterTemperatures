@@ -22,8 +22,8 @@ public class ConverterRequestTest {
         JsonObject jsonObject = new JsonParser().parse(res).getAsJsonObject();
 
         Assert.assertTrue(jsonObject.isJsonObject());
-        Assert.assertTrue(jsonObject.get("F").getAsString().equals("79"));
-        Assert.assertTrue(jsonObject.get("K").getAsString().equals("299"));
+        Assert.assertEquals("79", jsonObject.get("F").getAsString());
+        Assert.assertEquals("299", jsonObject.get("K").getAsString());
 
     }
 
@@ -44,8 +44,8 @@ public class ConverterRequestTest {
         JsonObject jsonObject = new JsonParser().parse(res).getAsJsonObject();
 
         Assert.assertTrue(jsonObject.isJsonObject());
-        Assert.assertTrue(jsonObject.get("C").getAsString().equals("26"));
-        Assert.assertTrue(jsonObject.get("F").getAsString().equals("79"));
+        Assert.assertEquals("26", jsonObject.get("C").getAsString());
+        Assert.assertEquals("79", jsonObject.get("F").getAsString());
 
     }
 
